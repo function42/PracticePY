@@ -50,7 +50,7 @@ def format_logging():
 def complex_example():
 	from logging import handlers
 	FILENAME = "example.log"
-	logger = logging.getLogger()
+	logger = logging.getLogger(__name__)
 	logger.setLevel(logging.INFO)
 	formatter = logging.Formatter(
 			fmt="%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s - %(message)s",
